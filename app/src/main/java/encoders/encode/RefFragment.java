@@ -31,7 +31,13 @@ public class RefFragment extends Fragment {
                 if(selectedItem.equals("ASCII")){
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new AsciiFragment()).addToBackStack(null).commit();
                 }
+                else if(selectedItem.equals("Unicode")){
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new UnicodeFragment()).addToBackStack(null).commit();
+                }
+                else {
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new NumberSystemFragment()).addToBackStack(null).commit();
 
+                }
                 /*Intent intent = new Intent(Activity.this,destinationActivity.class);
                 //based on item add info to intent
                 startActivity(intent);*/
